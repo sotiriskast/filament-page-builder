@@ -1,4 +1,5 @@
 <?php
+
 namespace Sotiriskast\FilamentPageBuilder\Models;
 
 use Illuminate\Database\Eloquent\Model;

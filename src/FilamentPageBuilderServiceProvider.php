@@ -2,22 +2,10 @@
 
 namespace Sotiriskast\FilamentPageBuilder;
 
-use Filament\Panel;
-use Filament\Support\Assets\AlpineComponent;
-use Filament\Support\Assets\Asset;
-use Filament\Support\Assets\Css;
-use Filament\Support\Assets\Js;
-use Filament\Support\Facades\FilamentAsset;
-use Filament\Support\Facades\FilamentIcon;
-use Illuminate\Filesystem\Filesystem;
-use Livewire\Features\SupportTesting\Testable;
-use Sotiriskast\FilamentPageBuilder\Resources\LayoutResource;
-use Sotiriskast\FilamentPageBuilder\Resources\PageResource;
+use Sotiriskast\FilamentPageBuilder\Commands\FilamentPageBuilderCommand;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Sotiriskast\FilamentPageBuilder\Commands\FilamentPageBuilderCommand;
-use Sotiriskast\FilamentPageBuilder\Testing\TestsFilamentPageBuilder;
 
 class FilamentPageBuilderServiceProvider extends PackageServiceProvider
 {

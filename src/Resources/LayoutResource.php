@@ -1,5 +1,7 @@
 <?php
+
 // src/Resources/LayoutResource.php
+
 namespace Sotiriskast\FilamentPageBuilder\Resources;
 
 use Filament\Forms;

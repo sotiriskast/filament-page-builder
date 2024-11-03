@@ -5,7 +5,6 @@ namespace Sotiriskast\FilamentPageBuilder\Resources;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Illuminate\Support\Str;
 use Sotiriskast\FilamentPageBuilder\Models\Page;
 
 class PageResource extends Resource
@@ -27,6 +26,7 @@ class PageResource extends Resource
                                     // Dynamic fields based on layout schema will be added here
                                 ]);
                         }
+
                         return $tabs;
                     }),
                 Forms\Components\Select::make('layout_id')
@@ -34,10 +34,14 @@ class PageResource extends Resource
                     ->required()
                     ->reactive()
                     ->afterStateUpdated(function ($state, Forms\Set $set) {
-                        if (!$state) return;
+                        if (! $state) {
+                            return;
+                        }
 
                         $layout = Layout::find($state);
-                        if (!$layout) return;
+                        if (! $layout) {
+                            return;
+                        }
 
                         // Dynamically add fields based on layout schema
                         foreach ($layout->fields_schema as $field) {
