@@ -1,15 +1,15 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Sotiriskast\FilamentPageBuilder;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class SkeletonPlugin implements Plugin
+class FilamentPageBuilderPlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'skeleton';
+        return 'filamentpagebuilder';
     }
 
     public function register(Panel $panel): void
